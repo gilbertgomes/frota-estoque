@@ -1,0 +1,19 @@
+version: '3.5'
+
+services: 
+     frota-estoque:
+        build:
+            context: .
+            cache_from:
+                - node:16-buster-slim          
+                - node_modules
+            target: production-stage
+        image: frota-estoque:v1.0.0
+        ports:
+            - 8025:80  
+        container_name: frota-estoque
+        command: [ "nginx", "-g", "daemon off;" ]    
+networks:
+    default:
+        external: 
+            name: docker1-hom
