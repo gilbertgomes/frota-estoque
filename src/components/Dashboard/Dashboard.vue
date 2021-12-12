@@ -13,7 +13,7 @@
     >
       <v-app-bar-nav-icon elevation="9" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Empresa</v-toolbar-title>
+      <v-toolbar-title>Frota Estoque</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -101,6 +101,7 @@
         { bottom: '5', title: 'OC', icon: 'mdi-file-video-outline' },
         { bottom: '6', title: 'Estatistica', icon: 'mdi-chart-bar' },
         { bottom: '7', title: 'Relatório', icon: 'mdi-printer' },
+        { bottom: '8', title: 'Sair/Fechar', icon: 'mdi-door-open' },
       ],
     }),
     methods: {
@@ -115,8 +116,8 @@
                 this.$router.push("/saldo")
             } else if (botao == '5') {
                 this.$router.push("/oc")
-            } else if (botao == '6') {
-                this.$router.push("/entrada")
+            } else if (botao == '8') {
+                this.$router.push("/login")
             }
         },
     },
