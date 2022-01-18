@@ -15,7 +15,8 @@ export default {
     //
   }),
   created() {
-    document.title = this.$appName;        
+    document.title = this.$appName;  
+    this.$router.push("/login");      
   },
 };
 </script>
